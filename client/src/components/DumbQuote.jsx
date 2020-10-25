@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import tronalddump from '../assets/tronalddump.png';
 
 const DumbQuote = () => {
   const [quote, setQuote] = useState('');
@@ -11,7 +12,12 @@ const DumbQuote = () => {
     };
     fetchQuote();
   }, []);
-  return <div>{quote.value}</div>;
+  return (
+    <>
+      <img src={tronalddump} style={{ width: '300px', marginBottom: '20px' }} />
+      <div>{quote.value}</div>;
+    </>
+  );
 };
 
 export default DumbQuote;

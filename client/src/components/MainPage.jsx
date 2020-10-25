@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import axios from 'axios';
+import tronalddump from '../assets/tronalddump.png';
 
 const MainPage = () => {
   const [search, setSearch] = useState('');
@@ -25,6 +26,7 @@ const MainPage = () => {
 
   return (
     <>
+      <img src={tronalddump} style={{ width: '300px', marginBottom: '20px' }} />
       <div className="field">
         <div
           className="control"
@@ -33,7 +35,7 @@ const MainPage = () => {
           <input
             className="input"
             type="text"
-            placeholder="Text input"
+            placeholder="dumb shit trump said"
             onChange={handleSubmit}
             style={{ width: '35%' }}
           />
